@@ -1,3 +1,0 @@
-#!/bin/bash
-kill -9 `ps -ef | grep "server_http_ex" | grep -v grep | awk '{print $2}'`
-echo "stopping........"
