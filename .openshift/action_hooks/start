@@ -5,5 +5,6 @@
 #nohup $OPENSHIFT_REPO_DIR/diy/testrubyserver.rb $OPENSHIFT_DIY_IP $OPENSHIFT_REPO_DIR/diy > $OPENSHIFT_DIY_DIR/logs/server.log 2>&1 &
 #nohup $OPENSHIFT_DATA_DIR/dlib-18.5/examples/build/server_http_ex > $OPENSHIFT_DIY_DIR/logs/server.log 2>&1 &
 echo "starting.............."
+export LD_LIBRARY_PATH=$OPENSHIFT_REPO_DIR/diy/App:$LD_LIBRARY_PATH
 nohup $OPENSHIFT_REPO_DIR/diy/AppServer/AppServer $OPENSHIFT_DIY_PORT $OPENSHIFT_DIY_IP > $OPENSHIFT_DIY_DIR/logs/server.log 2>&1 &
 
